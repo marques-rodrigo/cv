@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+\usepackage[scale=0.85]{geometry}
+% \setlength{\footskip}{149.60005pt}
+\recomputelengths
+
+% \usepackage{multibib}
+% \newcites{workshop}{{Extended abstracts}}
+% \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+% Personal --------------------------------------------------------------------
+\name{Rodrigo}{\texorpdfstring{dos Reis Canedo Marques\vspace*{.15in}}{Marques}}
+
+\phone[mobile]{+351~914~398~959}
+\email{rmarques@fc.up.pt}
+\social[linkedin]{rodrigo-marques2}
+\social[github]{RodrigoMarques16}
+\social[orcid]{0000-0003-2492-0197}
+
+\begin{document}
+
+\makecvtitle
+
+\vspace*{-.5in}
+
+\section{Research Interests}
+\cvitem{Languages}{Declarative, functional, meta-programming, polymorphism, data types and structures}
+\cvitem{Foundations}{Type theory, programming language semantics, logic and program proofs}
+\cvitem{Implementation}{Compilers, interpreters, abstract machines}
+\cvitem{Analysis}{Type checking, type inference, formal methods, verification, proof assistants}
+
+\input{education}
+\input{experience}
+\input{skills}
+% \input{output}
+
+\end{document}

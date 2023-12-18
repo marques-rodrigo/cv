@@ -1,0 +1,12 @@
+./.vscode/
+*.cut
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex*
+ltex.*
+.*fuse*
