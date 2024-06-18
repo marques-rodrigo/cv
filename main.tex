@@ -1,7 +1,8 @@
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[11pt,a4paper]{moderncv}
 
-\moderncvstyle{banking}
+\moderncvstyle[alignment=left]{banking}
 \moderncvcolor{black}
+
 \nopagenumbers{}
 
 \usepackage[english]{babel}
@@ -12,20 +13,24 @@
 \usepackage{enumitem}
 
 \usepackage[scale=0.85]{geometry}
-% \setlength{\footskip}{149.60005pt}
+
 \recomputelengths
 
-% \usepackage{multibib}
-% \newcites{workshop}{{Extended abstracts}}
-% \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+\usepackage{multibib}
+\newcites{workshop}{{Workshops}}
+\newcites{conpapers}{{Conference papers}}
+\newcites{dissertations}{{Dissertations}}
+\newcites{unpublished}{{Working papers}}
+
 
 % Personal --------------------------------------------------------------------
-\name{Rodrigo}{\texorpdfstring{dos Reis Canedo Marques\vspace*{.15in}}{Marques}}
+\name{Rodrigo}{\texorpdfstring{Marques\vspace*{.15in}}{Marques}}
+% \name{Rodrigo}{Marques}
 
 \phone[mobile]{+351~914~398~959}
-\email{rmarques@fc.up.pt}
+\email{rodrigo.marques@fc.up.pt}
 \social[linkedin]{rodrigo-marques2}
-\social[github]{RodrigoMarques16}
+\social[github]{marques-rodrigo}
 \social[orcid]{0000-0003-2492-0197}
 
 \begin{document}
@@ -34,15 +39,70 @@
 
 \vspace*{-.5in}
 
-\section{Research Interests}
-\cvitem{Languages}{Declarative, functional, meta-programming, polymorphism, data types and structures}
-\cvitem{Foundations}{Type theory, programming language semantics, logic and program proofs}
-\cvitem{Implementation}{Compilers, interpreters, abstract machines}
-\cvitem{Analysis}{Type checking, type inference, formal methods, verification, proof assistants}
+% ---------------------------------------------------------------------------------------------------------------------
 
-\input{education}
-\input{experience}
-\input{skills}
-% \input{output}
+\section{Research Interests}
+
+Programming Languages, Type Systems, Logic, Semantics.
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
+    \item[\normalfont{\emph{2019 -- 2023}}] \textbf{MSc Computer Science (Reliable Computing), University of Porto}
+    \item[\normalfont{\emph{2016 -- 2019}}] \textbf{BSc Computer Science, University of Porto}
+\end{description}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
+    \item[\normalfont{\emph{2023 -- curr}}] \textbf{Invited Assistant (University Teacher), University of Porto}
+    \item[\normalfont{\emph{2021 -- 2022}}] \textbf{Gameplay Programmer, NORTHWIND}
+\end{description}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Teaching}
+
+\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
+    \item[\normalfont{\emph{Fall 2023}}] Introduction to Programming (CC1024)\\
+                                         Programming Fundamentals (L.EIC003)
+    \item[\normalfont{\emph{Spring 2024}}] Functional Programming (CC1005)\\
+                                         Programming (L.EIC009)                                         
+\end{description}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Dissertation}
+
+\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
+    \item[\normalfont{\emph{MSc}}] \textbf{Subtyping: Study and Implementation}
+                                \\ \emph{Studying the combination of algebraic subtyping with row polymorphism and type inference algorithms for this system}
+\end{description}
+
+
+\section{Publications}
+% \subsection*{Conference Papers}
+\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
+    \item[\normalfont{\emph{Draft}}] \textbf{A Lazy Abstract Machine for a Tracing Interpreter}
+                                        \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
+
+    \item[\normalfont{\emph{IFL 2023}}] \textbf{A Lazy Abstract Machine Based on a Pattern-Matching Calculus}
+                                    \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
+                                    \\ 35th Symposium on Implementation and Application of Functional Languages
+\end{description}
+
+\section{Presentations}
+
+% \subsection*{Extended Abstracts}
+\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
+    \item[\normalfont{\emph{ML 2022}}] \textbf{Towards Algebraic Subtyping for Extensible Records}
+                                    \\ \emph{\textbf{Rodrigo Marques}, Mário Florido, Pedro Vasconcelos}                                
+                                    \\ Presented at: ML Workshop at the International Conference on Functional Programming
+\end{description}
+
 
 \end{document}
