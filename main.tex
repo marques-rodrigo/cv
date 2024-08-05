@@ -8,35 +8,34 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage[sc]{mathpazo}
 \usepackage{microtype}
 \usepackage{enumitem}
 
 \usepackage[scale=0.85]{geometry}
 
-\recomputelengths
+\recomputelengths%
 
 % Personal --------------------------------------------------------------------
-\name{Rodrigo}{\texorpdfstring{Marques\vspace*{.15in}}{Marques}}
-% \name{Rodrigo}{Marques}
-
-\phone[mobile]{+351~914~398~959}
-\email{rodrigo.marques@fc.up.pt}
-\social[linkedin]{rodrigo-marques2}
-\social[github]{marques-rodrigo}
-\social[orcid]{0000-0003-2492-0197}
+\name{Rodrigo}{\texorpdfstring{Marques\vspace*{.5em}}{Marques}}% add some whitespace between name and contacts
+ 
+\phone[mobile]{+351~914~398~959}%
+\email{rodrigo.marques@fc.up.pt}%
+\social[linkedin]{rodrigo-marques2}%
+\social[github]{marques-rodrigo}%
+\social[orcid]{0000-0003-2492-0197}%
 
 \begin{document}
 
-\makecvtitle
+\makecvtitle%
 
-\vspace*{-.5in}
+\vspace*{-3em}% reduce blank space between cv title and cv body
 
 % ---------------------------------------------------------------------------------------------------------------------
 
-\section{Research Interests}
+% \section{Research Interests}
 
-Programming Languages, Type Systems, Logic, Semantics.
+% Programming Languages, Type Systems, Logic, Semantics.
 
 % ---------------------------------------------------------------------------------------------------------------------
 
@@ -61,10 +60,11 @@ Programming Languages, Type Systems, Logic, Semantics.
 \section{Teaching}
 
 \begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{Fall 2023}}] Introduction to Programming (CC1024)\\
-                                         Programming Fundamentals (L.EIC003)
+    \item[\normalfont{\emph{Fall 2024}}] Functional and Logic Programming (L.EIC024)
     \item[\normalfont{\emph{Spring 2024}}] Functional Programming (CC1005)\\
                                          Programming (L.EIC009)                                         
+    \item[\normalfont{\emph{Fall 2023}}] Introduction to Programming (CC1024)\\
+                                         Programming Fundamentals (L.EIC003)
 \end{description}
 
 % ---------------------------------------------------------------------------------------------------------------------
@@ -73,29 +73,32 @@ Programming Languages, Type Systems, Logic, Semantics.
 
 \begin{description}[labelwidth=60pt,align=right,leftmargin=!]
     \item[\normalfont{\emph{MSc}}] \textbf{Subtyping: Study and Implementation}
-                                \\ \emph{Studying the combination of algebraic subtyping with row polymorphism and type inference algorithms for this system}
+                                \\ \emph{Studied the combination of algebraic subtyping with row polymorphism and field types, and type inference for this system}
 \end{description}
 
 
 \section{Publications}
 % \subsection*{Conference Papers}
 \begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{Draft}}] \textbf{A Lazy Abstract Machine for a Tracing Interpreter}
-                                        \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
+    \item[\normalfont{\emph{Haskell 2024}}] 
+        \textbf{A Lazy Abstract Machine for a Tracing Interpreter}
+        \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
+        \\ 17th ACM SIGPLAN International Haskell Symposium    
 
-    \item[\normalfont{\emph{IFL 2023}}] \textbf{A Lazy Abstract Machine Based on a Pattern-Matching Calculus}
-                                    \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
-                                    \\ 35th Symposium on Implementation and Application of Functional Languages
+    \item[\normalfont{\emph{IFL 2023}}]
+        \textbf{A Lazy Abstract Machine Based on a Pattern-Matching Calculus}
+        \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
+        \\ 35th Symposium on Implementation and Application of Functional Languages
 \end{description}
 
 \section{Presentations}
 
 % \subsection*{Extended Abstracts}
 \begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{ML 2022}}] \textbf{Towards Algebraic Subtyping for Extensible Records}
-                                    \\ \emph{\textbf{Rodrigo Marques}, Mário Florido, Pedro Vasconcelos}                                
-                                    \\ Presented at: ML Workshop at the International Conference on Functional Programming
+    \item[\normalfont{\emph{ML 2022}}]
+        \textbf{Towards Algebraic Subtyping for Extensible Records}
+        \\ \emph{\textbf{Rodrigo Marques}, Mário Florido, Pedro Vasconcelos}                                
+        \\ Extended abstract presented at: ML Workshop at the 27th ACM SIGPLAN International Conference on Functional Programming
 \end{description}
-
 
 \end{document}
