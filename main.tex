@@ -1,9 +1,9 @@
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[12pt,a4paper]{moderncv}
 
-\moderncvstyle[alignment=left]{banking}
 \moderncvcolor{black}
+\moderncvstyle[alignment=left]{banking}
 
-\nopagenumbers{}
+\colorlet{firstnamecolor}{lastnamecolor}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -11,17 +11,36 @@
 \usepackage[sc]{mathpazo}
 \usepackage{microtype}
 \usepackage{enumitem}
-
-\usepackage[scale=0.85]{geometry}
+\usepackage[hmargin=0.5in,vmargin=0.5in]{geometry}
+% \usepackage[scale=0.85]{geometry}
 
 \recomputelengths%
 
+\nopagenumbers{}
+
+\renewcommand*{\sectionfont}{\Large\mdseries\upshape}
+\renewcommand*{\subsectionrule}{}
+\renewcommand*{\subsectionfont}{\large\bfseries\upshape}
+
+\newenvironment{datedescription}{%
+    \begin{description}[
+        style=multiline,
+        labelwidth=66pt,
+        labelsep=6pt,
+        leftmargin=72pt,
+        align=right,
+        itemsep=0.25em,
+        parsep=0pt,
+        topsep=0.25em
+    ]
+}{\end{description}}
+
 % Personal --------------------------------------------------------------------
 \name{Rodrigo}{\texorpdfstring{Marques\vspace*{.5em}}{Marques}}% add some whitespace between name and contacts
- 
-\phone[mobile]{+351~914~398~959}%
-\email{rodrigo.marques@fc.up.pt}%
-\homepage{https://marques-rodrigo.github.io/}
+\phone[mobile]{+1~412~608~2487}%
+% \phone[mobile]{+351~914~398~959}%
+\email{rodrigom@cs.cmu.edu}%
+\homepage{marques-rodrigo.github.io}
 \social[linkedin]{rodrigo-marques2}%
 \social[github]{marques-rodrigo}%
 \social[orcid]{0000-0003-2492-0197}%
@@ -30,100 +49,136 @@
 
 \makecvtitle%
 
-\vspace*{-3em}% reduce blank space between cv title and cv body
+\vspace*{-2em}% reduce blank space between cv title and cv body
+
+\newcommand{\florido}{\href{https://liacc.fe.up.pt/member/amf}{Mário Florido}}
+\newcommand{\vasconcelos}{\href{https://www.dcc.fc.up.pt/~pbv/}{Pedro Vasconcelos}}
+\newcommand{\pfenning}{\href{https://www.cs.cmu.edu/~fp/}{Frank Pfenning}}
 
 % ---------------------------------------------------------------------------------------------------------------------
 
 \section{Research Interests}
 
-Programming Languages, Type Systems, Semantics, Substructural Logics.
+Programming Languages, Type Inference, Substructural and Modal Type Systems
 
 % ---------------------------------------------------------------------------------------------------------------------
 
 \section{Education}
 
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{2019 -- 2023}}] \textbf{MSc Computer Science (Reliable Computing), University of Porto}
-    \item[\normalfont{\emph{2016 -- 2019}}] \textbf{BSc Computer Science, University of Porto}
-\end{description}
+\cventry[1em]{Aug. 2025 -- present}{PhD in Computer Science}
+    {Carnegie Mellon University \& University of Porto}{Pittsburgh, PA \& Porto, Portugal}{}{
+    \begin{itemize}[noitemsep]
+        \item[--] Studying type inference for substructural adjoint types.
+        \item[--] Advised by \pfenning\ and \florido.
+    \end{itemize}}
+
+\cventry[1em]{Sep. 2019 -- Dec. 2023}{MSc in Computer Science (Reliable Computing)}
+    {Universidade do Porto}{Porto, Portugal}{}{
+        \begin{itemize}[noitemsep]
+            \item[--] \textbf{Dissertation}: \href{https://hdl.handle.net/10216/156497}{Subtyping: Study and Implementation}.
+            \item[--] Studied type inference for algebraic subtyping with row polymorphism.
+            \item[--] Advised by \florido\ and \vasconcelos.
+        \end{itemize}}
+
+\cventry{Sep. 2016 -- Jul. 2019}{BSc in Computer Science}{Universidade do Porto}{Porto, Portugal}{}{}
 
 % ---------------------------------------------------------------------------------------------------------------------
 
-\section{Employment}
+\section{Experience}
 
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{2023 -- now}}] \textbf{Invited Assistant (University Teacher), University of Porto}
-    \\ \small{Lab instructor for courses in programming and in theoretical computer science.}
-    \item[\normalfont{\emph{2021 -- 2022}}] \textbf{Gameplay Programmer, NORTHWIND}
-    \\ \small{Developed an ocean simulation and sailing mechanics as an extension to the game.}
-    \\ \small{Introduced version control. Integrated game with PlayFab analytics.}
-\end{description}
+\cventry[0.5em]{Sep. 2023 -- Sep. 2025}{Teaching Assistant}
+    {Universidade do Porto}{Porto, Portugal}{}{
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item[--] Lab instructor, preparing exams and weekly problems, grading.
+    \end{itemize}
+    }
 
-% ---------------------------------------------------------------------------------------------------------------------
+\cventry[0.5em]{Aug. 2021 -- Aug. 2022}{Gameplay Programmer}{NORTHWIND}{Montreal, Canada | Remote}{}{
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item[--] Developed gameplay systems for an online role-playing game.
+    \end{itemize}}
 
-\section{Teaching}
-
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{Fall 2024}}] \textbf{Functional and Logic Programming} \emph{(Haskell, Prolog)} (L.EIC024)
-    \item[\normalfont{\emph{Spring 2024}}] \textbf{Functional Programming} \emph{(Haskell)} (CC1005)\\
-                                         \textbf{Programming} \emph{(C++)} (L.EIC009)                                         
-    \item[\normalfont{\emph{Fall 2023}}] \textbf{Introduction to Programming} \emph{(Python)} (CC1024)\\
-                                         \textbf{Programming Fundamentals} \emph{(Python)} (L.EIC003)
-\end{description}
+\cventry{Summer 2021}{Accelerator Program Intern}{ROBLOX}{San Mateo, CA | Remote}{}{
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item[--] Developed an ocean simulation and sailing mechanics for an online role-playing game.
+        \item[--] Introduced Git-based version control and integrated PlayFab analytics for project telemetry.
+    \end{itemize}}
 
 % ---------------------------------------------------------------------------------------------------------------------
 
 \section{Publications}
-% \subsection*{Conference Papers}
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{Haskell 2024}}] 
-        \textbf{Haskelite: A Tracing Interpreter Based on a Pattern-Matching Calculus}
+
+\begin{datedescription}
+    \item[\normalfont{\emph{2024}}]
+        \href{https://doi.org/10.1145/3677999.3678274}{\textbf{Haskelite: A Tracing Interpreter Based on a Pattern-Matching Calculus}}
         \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
-        \\ \emph{Proceedings of the 17th ACM SIGPLAN International Haskell Symposium}    
-
-    % \item[\normalfont{\emph{IFL 2023}}]
-    %     \textbf{A Lazy Abstract Machine Based on a Pattern-Matching Calculus}
-    %     \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
-    %     \\ Presented at: Symposium on Implementation and Application of Functional Languages
-\end{description}
-
-\subsection*{Dissertation}
-
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{MSc}}] \textbf{Subtyping: Study and Implementation}
-                                \\ \emph{Studied type inference for the combination of algebraic subtyping, parametric polymorphism, and row and presence polymorphism.}
-\end{description}
+        \\ \emph{Proceedings of the 17th ACM SIGPLAN International Haskell Symposium}, pp. 1--13, ACM.
+        \href{https://doi.org/10.1145/3677999.3678274}{doi:10.1145/3677999.3678274}
+\end{datedescription}
 
 \section{Presentations}
 
-% \subsection*{Extended Abstracts}
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{ML 2022}}]
-        \textbf{Towards Algebraic Subtyping for Extensible Records}
+\begin{datedescription}
+    \item[\normalfont{\emph{2022}}]
+        \href{https://arxiv.org/abs/2407.06747}{\textbf{Towards Algebraic Subtyping for Extensible Records}}
         \\ \emph{\textbf{Rodrigo Marques}, Mário Florido, Pedro Vasconcelos}                                
-        \\ Extended abstract presented at the ML Workshop at the 27th ACM SIGPLAN International Conference on Functional Programming
-\end{description}
+        \\ Extended abstract presented at the ML Workshop, 27th ACM SIGPLAN International Conference on Functional Programming.
+\end{datedescription}
+
+\section{Teaching}
+
+\subsection{Universidade do Porto — Lab Instructor}
+
+\begin{datedescription}
+    \item[\normalfont{\emph{Spring 2025}}] \textbf{Theory of Computation} \emph{(Formal Languages, Automata, Turing Machines)}
+    \item[\normalfont{\emph{Fall 2024}}] \textbf{Functional and Logic Programming} \emph{(Haskell, Prolog)}
+    \item[\normalfont{\emph{Spring 2024}}] \textbf{Functional Programming} \emph{(Haskell)}\\
+                                         \textbf{Programming} \emph{(C++)}
+    \item[\normalfont{\emph{Fall 2023}}] \textbf{Introduction to Programming} \emph{(Python)}\\
+                                         \textbf{Programming Fundamentals} \emph{(Python)}
+\end{datedescription}
+
+\section{Awards}
+
+\begin{datedescription}
+    \item[\normalfont{\emph{2025 -- 2030}}] \textbf{CMU Portugal Dual Degree PhD Fellowship}
+\end{datedescription}
 
 % ---------------------------------------------------------------------------------------------------------------------
 
-\section{Scholarships and Travel Grants}
+\section{Service}
 
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{2024}}]
-           Proof Society International School
-        \\ International School on Rewriting 
-        \\ Oregon Programming Languages Summer School
-\end{description}
+\subsection{Student Volunteer}
 
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[\normalfont{\emph{2023}}]
-        EuroProofNet Summer School on Verification Technology, Systems \& Applications
-\end{description}
+\begin{datedescription}
+    \item[\normalfont{\emph{2026}}] 9th Federated Logic Conference
+    \item[\normalfont{\emph{2024}}] 29th ACM SIGPLAN International Conference on Functional Programming
+\end{datedescription}
 
-\section{Miscellaneous}
+\subsection{Departmental Service}
 
-\begin{description}[labelwidth=60pt,align=right,leftmargin=!]
-    \item[PLC] Founding member and organizer of the interest group in Programming Languages and Theory of Computation at the University of Porto.
-\end{description}
+\begin{datedescription}
+    \item[\normalfont{\emph{2026}}] Organization of the Introductory Course for Computer Science Doctoral Students, Carnegie Mellon University
+    \item[\normalfont{\emph{2026}}] Organization of the Computer Science Department Open House, Carnegie Mellon University
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Schools}
+
+\begin{datedescription}
+    \item[\normalfont{\emph{2026}}] \textbf{Summer School on Foundations of Programming and Software Systems}, Instituto Universitário de Lisboa
+    \item[\normalfont{\emph{2025}}] \textbf{Scottish Programming Languages \& Verification Summer School}, University of Edinburgh
+    \item[\normalfont{\emph{2024}}] \textbf{Oregon Programming Languages Summer School}, Boston University
+    \\ \textbf{International School on Rewriting}, University of Innsbruck
+    \\ \textbf{International School on Proof Theory}, University of Birmingham
+    \item[\normalfont{\emph{2023}}] \textbf{EuroProofNet Summer School on Verification Technology, Systems \& Applications}, INRIA Nancy
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Skills}
+\cvitem{Programming}{C++ $\cdot$ Haskell $\cdot$ Lua $\cdot$ Prolog $\cdot$ Python}
+\cvitem{Languages}{Portuguese (Native) $\cdot$ English (Fluent)}
 
 \end{document}
