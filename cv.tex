@@ -1,0 +1,195 @@
+\documentclass[12pt,a4paper]{moderncv}
+
+\moderncvcolor{black}
+\moderncvstyle[alignment=left]{banking}
+
+\colorlet{firstnamecolor}{lastnamecolor}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[hmargin=0.7in,vmargin=0.7in]{geometry}
+% \usepackage[scale=0.85]{geometry}
+
+\recomputelengths%
+
+\nopagenumbers{}
+
+\renewcommand*{\sectionfont}{\Large\mdseries\upshape}
+\renewcommand*{\subsectionrule}{}
+\renewcommand*{\subsectionfont}{\large\bfseries\upshape}
+
+\newenvironment{datedescription}{%
+    \begin{description}[
+        style=multiline,
+        labelwidth=66pt,
+        labelsep=6pt,
+        leftmargin=72pt,
+        align=right,
+        font=\normalfont\itshape,
+        itemsep=0.25em,
+        parsep=0pt,
+        topsep=0.25em
+    ]
+}{\end{description}}
+
+% Personal --------------------------------------------------------------------
+\name{Rodrigo}{\texorpdfstring{Marques\vspace*{.5em}}{Marques}}% add some whitespace between name and contacts
+\phone[mobile]{+1~412~608~2487}%
+% \phone[mobile]{+351~914~398~959}%
+\email{rodrigom@cs.cmu.edu}%
+% \homepage{marques-rodrigo.github.io}
+\social[linkedin]{rodrigo-marques2}%
+\social[github]{marques-rodrigo}%
+\social[orcid]{0000-0003-2492-0197}%
+
+\begin{document}
+
+\makecvtitle%
+
+\vspace*{-2em}% reduce blank space between cv title and cv body
+
+\newcommand{\florido}{\href{https://liacc.fe.up.pt/member/amf}{Mário Florido}}
+\newcommand{\vasconcelos}{\href{https://www.dcc.fc.up.pt/~pbv/}{Pedro Vasconcelos}}
+\newcommand{\pfenning}{\href{https://www.cs.cmu.edu/~fp/}{Frank Pfenning}}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Research Interests}
+
+% Programming Languages, Type Inference, Substructural and Modal Type Systems
+
+I am interested in the design and implementation of \textbf{programming languages} whose \textbf{type systems} draw on \textbf{substructural} and \textbf{modal logics} to characterize program behavior more precisely. My current work focuses on \textbf{type inference} for \textbf{adjoint type systems}.
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry[1em]{Aug. 2025 -- present}{PhD in Computer Science}
+    {Carnegie Mellon University \& Universidade do Porto}{Pittsburgh, PA \& Porto, Portugal}{}{
+    \begin{itemize}[noitemsep]
+        \item[--] Studying type inference for substructural adjoint types.
+        \item[--] Advised by \pfenning\ and \florido.
+    \end{itemize}}
+
+\cventry[1em]{Sep. 2019 -- Dec. 2023}{MSc in Computer Science (Reliable Computing)}
+    {Universidade do Porto}{Porto, Portugal}{}{
+        \begin{itemize}[noitemsep]
+            \item[--] \textbf{Dissertation}: \href{https://hdl.handle.net/10216/156497}{Subtyping: Study and Implementation}.
+            \item[--] Studied type inference for algebraic subtyping with row polymorphism.
+            \item[--] Advised by \florido\ and \vasconcelos.
+        \end{itemize}}
+
+\cventry{Sep. 2016 -- Jul. 2019}{BSc in Computer Science}{Universidade do Porto}{Porto, Portugal}{}{}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\cventry[0.5em]{Sep. 2023 -- Sep. 2025}{Teaching Assistant}
+    {Universidade do Porto}{Porto, Portugal}{}{
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item[--] Taught labs, prepared problems for exams and recitations, and graded coursework.
+    \end{itemize}
+    }
+
+\cventry[0.5em]{Aug. 2021 -- Aug. 2022}{Gameplay Programmer}{NORTHWIND}{Montreal, Canada | Remote}{}{
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item[--] Developed gameplay systems for an online role-playing game.
+    \end{itemize}}
+
+\cventry{Summer 2021}{Accelerator Program Intern}{ROBLOX}{San Mateo, CA | Remote}{}{
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item[--] Developed an ocean simulation and sailing mechanics for an online role-playing game.
+    \end{itemize}}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Fellowships}
+
+\begin{datedescription}
+    \item[2025 -- 2030] \textbf{CMU Portugal Dual Degree PhD Fellowship}
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Publications}
+
+\begin{datedescription}
+    \item[2024]
+        \href{https://doi.org/10.1145/3677999.3678274}{\textbf{Haskelite: A Tracing Interpreter Based on a Pattern-Matching Calculus}}
+        \\ \emph{Pedro Vasconcelos, \textbf{Rodrigo Marques}}
+        \\ \emph{Proceedings of the 17th ACM SIGPLAN International Haskell Symposium}
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Presentations}
+
+\begin{datedescription}
+    \item[2022]
+        \href{https://arxiv.org/abs/2407.06747}{\textbf{Towards Algebraic Subtyping for Extensible Records}}
+        \\ \emph{\textbf{Rodrigo Marques}, Mário Florido, Pedro Vasconcelos}                                
+        \\ \emph{Extended abstract presented at the ML Workshop, 27th ACM SIGPLAN International Conference on Functional Programming}
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Teaching}
+
+\cvitem{Universidade do Porto}{Teaching Assistant}
+
+\begin{datedescription}
+    \item[Spring 2025] \textbf{Theory of Computation} \emph{(Formal Languages, Automata, Turing Machines)}
+    \item[Fall 2024] \textbf{Functional and Logic Programming} \emph{(Haskell, Prolog)}
+    \item[Spring 2024] \textbf{Functional Programming} \emph{(Haskell)}\\
+                                         \textbf{Programming} \emph{(C++)}
+    \item[Fall 2023] \textbf{Introduction to Programming} \emph{(Python)}\\
+                                         \textbf{Programming Fundamentals} \emph{(Python)}
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Service}
+
+\subsection{Student Volunteer}
+
+\begin{datedescription}
+    \item[2026] 9th Federated Logic Conference
+    \item[2024] 29th ACM SIGPLAN International Conference on Functional Programming
+\end{datedescription}
+
+\subsection{Departmental Service}
+
+\cvitem{Carnegie Mellon University}{}
+
+\begin{datedescription}
+    \item[2026] Organization of the Introductory Course for Computer Science Doctoral Students
+    \\ Organization of the Computer Science Department Open House
+    \\ Organization of the Programming Languages Seminar
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Schools}
+
+\begin{datedescription}
+    \item[2026] \textbf{Summer School on Foundations of Programming and Software Systems}, Instituto Universitário de Lisboa
+    \item[2025] \textbf{Scottish Programming Languages \& Verification Summer School}, University of Edinburgh
+    \item[2024] \textbf{Oregon Programming Languages Summer School}, Boston University
+    \\ \textbf{International School on Rewriting}, University of Innsbruck
+    \\ \textbf{International School on Proof Theory}, University of Birmingham
+    \item[2023] \textbf{EuroProofNet Summer School on Verification Technology, Systems \& Applications}, INRIA Nancy
+\end{datedescription}
+
+% ---------------------------------------------------------------------------------------------------------------------
+
+\section{Skills}
+\cvitem{Programming}{C++ $\cdot$ Haskell $\cdot$ Lua $\cdot$ Prolog $\cdot$ Python}
+\cvitem{Tooling}{Git $\cdot$ \LaTeX}
+\cvitem{Languages}{Portuguese (Native) $\cdot$ English (Fluent)}
+
+\end{document}
