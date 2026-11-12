@@ -10,3 +10,7 @@
 *.synctex*
 ltex.*
 .*fuse*
+letter.pdf
+.gitignore
+letter.tex
+_out/
